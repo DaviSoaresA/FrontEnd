@@ -1,11 +1,7 @@
-document
-.getElementById("calcular")
-.addEventListener("click", function () {
+document.getElementById("calcular").addEventListener("click", function () {
   var num1 = parseFloat(document.getElementById("num1").value);
   var num2 = parseFloat(document.getElementById("num2").value);
-  var operacao = document.querySelector(
-    'input[name="operacao"]:checked'
-  );
+  var operacao = document.querySelector('input[name="operacao"]:checked');
 
   if (isNaN(num1) || isNaN(num2)) {
     alert("Valores inválidos");
