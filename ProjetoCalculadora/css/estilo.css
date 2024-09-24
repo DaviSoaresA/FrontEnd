@@ -1,11 +1,7 @@
-#titiloSite{
-    display: inline-block;
+#tituloSite{
     text-align: center;
     font-style: oblique;
     color: rgb(105, 105, 105);
-    border: 45 px solid coral;
-    box-sizing: border-box;
-    width: 100%;
 }
 #num1{
     text-align: justify;
@@ -19,28 +15,22 @@
     font-style: italic;
     color: black;
 }
-#labelNumber1{
-    text-align: justify;
+label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: larger;
-    font-style: inherit;
-    color: black;
-}
-#labelNumber2{
     text-align: justify;
-    font-size: larger;
-    font-style: inherit;
-    color: black;
 }
 #labelOp{
-    border: 5px;
-    border-color: rgb(105, 105, 105);
-    font-size: large;
+    font-size: larger;
     font-style: normal;
     color: rgb(145, 145, 145);
+    font-weight: bold;
 }
 button{
   width: 50%;
   text-align: center;
+  box-sizing: border-box;
+  border-style: dashed;
 }
 #res{
     padding-left: 100px;
