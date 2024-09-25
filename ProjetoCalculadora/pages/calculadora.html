@@ -10,25 +10,54 @@
     <header>
       <h1 id="tituloSite">Calculadora Digital</h1>
       <br />
-      <label for="num1">Escolha o primeiro número:</label>
-      <input type="number" id="num1" name="num1" /><br /><br />
-      <label for="num2">Escolha o segundo número:</label>
-      <input type="number" id="num2" name="num2" />
-      <br /><br />
-      <label for="operacao" id="labelOp">Escolha a operação:</label>
-      <input type="radio" id="soma" name="operacao" value="Soma" />
-      <label for="soma">Soma</label>
-      <input type="radio" id="subtracao" name="operacao" value="Subtracao" />
-      <label for="subtracao">Subtração</label>
-      <input type="radio" id="multplicacao" name="operacao" value="Multiplicacao"/>
-      <label for="multplicacao">Multiplicação</label>
-      <input type="radio" id="divisao" name="operacao" value="Divisao" />
-      <label for="divisao">Divisão</label>
-      <br /><br />
-      <button id="calcular">Calcular</button>
-      <br /><br />
-      <div id="res">Resultado</div>
+      <div class="content">
+        <input type="text" name="display" readonly class="display" />
+        <div class="butoes">
+          <input type="button" name="1" value="1" id="num1" class="num" />
+          <input type="button" name="2" value="2" id="num2" class="num" />
+          <input type="button" name="3" value="3" id="num3" class="num" />
+          <input type="button" name="4" value="4" id="num4" class="num" />
+          <input type="button" name="5" value="5" id="num5" class="num" />
+          <input type="button" name="6" value="6" id="num6" class="num" />
+          <input type="button" name="7" value="7" id="num7" class="num" />
+          <input type="button" name="8" value="8" id="num8" class="num" />
+          <input type="button" name="9" value="9" id="num9" class="num" />
+          <input type="button" name="0" value="0" id="num0" class="num" />
 
+          <input type="button" name="soma" value="+" id="soma" class="op" />
+          <input
+            type="button"
+            name="subtracao"
+            value="-"
+            id="subtracao"
+            class="op"
+          />
+          <input
+            type="button"
+            name="multiplicacao"
+            value="x"
+            id="multiplicacao"
+            class="op"
+          />
+          <input
+            type="button"
+            name="divisao"
+            value="÷"
+            id="divisao"
+            class="op"
+          />
+
+          <input type="button" name="reslt" value="=" id="igual" />
+
+          <input type="button" name="virg" value="," id="virgula">
+
+          <input type="button" value="Del" name="del" id="limpar">
+
+          <input type="button" value="Mod" name="mod" id="mod" class="op">
+
+          <input type="button" value="%" name="porc" id="porcentagem" class="op">
+        </div>
+      </div>
       <script src="/js/calculo.js"></script>
     </header>
   </body>
