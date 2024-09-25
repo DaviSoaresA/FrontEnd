@@ -1,33 +1,45 @@
-document.getElementById("calcular").addEventListener("click", function () {
-  var num1 = parseFloat(document.getElementById("num1").value);
-  var num2 = parseFloat(document.getElementById("num2").value);
-  var operacao = document.querySelector('input[name="operacao"]:checked');
+let display = document.querySelector('.display');
 
-  if (isNaN(num1) || isNaN(num2)) {
-    alert("Valores inválidos");
-    return;
-  }
-  if (operacao === null) {
-    alert("Escolha uma operação!");
-    return;
-  }
-  var res;
-  switch (operacao.value) {
-    case "Soma":
-      res = num1 + num2;
-      break;
-    case "Subtracao":
-      res = num1 - num2;
-      break;
-    case "Multiplicacao":
-      res = num1 * num2;
-      break;
-    case "Divisao":
-      res = num1 / num2;
-      break;
-    default:
-      break;
-  }
+function adicionarAoDisplay(valor){
+    display.value += valor;
+}
 
-  document.getElementById("res").innerText = "Resultado: " + res;
+let botoesNum = document.querySelectorAll('.num');
+let botoesOp = document.querySelectorAll('.op');
+
+
+botoesNum.forEach(function(botao){
+    botao.addEventListener('click', function() {
+        adicionarAoDisplay(botao.value);
+    });
+});
+
+botoesOp.forEach(function(botao) {
+    botao.addEventListener('click', function() {
+        adicionarAoDisplay(botao.value);
+    });
+});
+
+
+
+document.getElementById('igual').addEventListener('click', function(){
+    try {
+        let expressao = display.value;
+        if (expressao.includes('%')) {
+            let numeros = expressao.split('%');
+            let porcentagem = parseFloat(numeros[0]);
+            let numeroPrinc = parseFloat(numeros[1]);
+
+            display.value = (numeroPrinc * (porcentagem/100));
+        }
+        else{
+            display.value = eval(display.value.replace('x', '*').replace('÷','/').replace('Mod','%'));
+        }
+    } catch (e) {
+        display.value = 'Erro';
+    }
+});
+
+document.getElementById('limpar').addEventListener('click', function(){
+    display.value = '';
 });
